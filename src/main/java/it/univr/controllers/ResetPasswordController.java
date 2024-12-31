@@ -1,4 +1,4 @@
-package it.univr.controller;
+package it.univr.controllers;
 
 import it.univr.model.PasswordResetToken;
 import it.univr.model.User;
