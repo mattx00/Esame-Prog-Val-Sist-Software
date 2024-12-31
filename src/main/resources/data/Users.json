@@ -1,0 +1,62 @@
+[
+  {
+    "username": "admin",
+    "password": "15267ab55581aeefcfc5e17ef6799e100df67e99d1271f048d423800a07e4602",
+    "role": "ADMIN",
+    "email": "admin@example.com",
+    "loginAttempts": 3,
+    "accountLocked": false,
+    "privacyAccepted": true,
+    "tempPasswordActive": false,
+    "token": {
+      "token": "random-uuid-string",
+      "expiryDate": "2024-12-30T12:34:56",
+      "userUsername": "admin"
+    }
+  },
+  {
+    "username": "supervisor",
+    "password": "b34108d5882cdc378096239f71c9372b6f3776ff45729d17c868dbd1656e3e70",
+    "role": "SUPERVISOR",
+    "email": "supervisor@example.com",
+    "loginAttempts": 3,
+    "accountLocked": false,
+    "privacyAccepted": false,
+    "tempPasswordActive": false,
+    "token": {
+      "token": "random-uuid-string-1a2b3c",
+      "expiryDate": "2040-12-30T12:34:56",
+      "userUsername": "supervisor"
+    }
+  },
+  {
+    "username": "researcher",
+    "password": "229573dc8913601e77924c501b00fe5edaeaca2612e3eed316b71aff8208ce29",
+    "role": "RESEARCHER",
+    "email": "researcher@example.com",
+    "loginAttempts": 3,
+    "accountLocked": false,
+    "privacyAccepted": true,
+    "tempPasswordActive": false,
+    "token": {
+      "token": "random-uuid-string-4d5e6f",
+      "expiryDate": "2024-12-30T12:34:56",
+      "userUsername": "researcher"
+    }
+  },
+  {
+    "username": "researcher2",
+    "password": "229573dc8913601e77924c501b00fe5edaeaca2612e3eed316b71aff8208ce29",
+    "role": "RESEARCHER",
+    "email": "researcher2@example.com",
+    "loginAttempts": 3,
+    "accountLocked": false,
+    "privacyAccepted": false,
+    "tempPasswordActive": false,
+    "token": {
+      "token": "random-uuid-string-7d8e9f",
+      "expiryDate": "2024-12-30T12:34:56",
+      "userUsername": "researcher2"
+    }
+  }
+]
