@@ -1,4 +1,4 @@
-package it.univr.controller;
+package it.univr.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
