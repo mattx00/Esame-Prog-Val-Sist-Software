@@ -1,8 +1,8 @@
 package it.univr.controllers;
 
-import it.univr.model.User;
-import it.univr.service.EmailService;
-import it.univr.service.UserService;
+import it.univr.models.User;
+import it.univr.services.EmailService;
+import it.univr.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

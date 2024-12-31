@@ -1,15 +1,11 @@
 package it.univr.services;
 
 import it.univr.component.PasswordHash;
-import it.univr.model.PasswordResetToken;
-import it.univr.model.User;
-import it.univr.repository.UserRepository;
+import it.univr.models.PasswordResetToken;
+import it.univr.models.User;
+import it.univr.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.UUID;
 
 @Service
 public class UserService {
@@ -29,8 +25,6 @@ public class UserService {
     public User findByToken(PasswordResetToken token) {
         return userRepository.findByToken(token);
     }
-
-    public List<User> findByRole(String token) {return userRepository.findByRole(token);}
 
     public boolean authenticate(String password, User user) {
         return PasswordHash.verifyPassword(password, user.getPassword());

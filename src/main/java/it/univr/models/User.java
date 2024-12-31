@@ -2,15 +2,13 @@ package it.univr.models;
 
 import it.univr.enums.Role;
 import jakarta.persistence.*;
-import org.thymeleaf.util.StringUtils;
 
 import com.fasterxml.jackson.annotation.JsonCreator; 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-@Table(name='users')
+@Table(name="users")
 public class User {
-
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
@@ -20,7 +18,9 @@ public class User {
     private String password;
     private String email;
     private Role role;
-    private PasswordReset token;
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name="token_id")
+    private PasswordResetToken token;
     private int loginAttempts;
     private boolean accountLocked;
     private boolean privacyAccepted;
@@ -40,7 +40,7 @@ public class User {
 
     // Deserializzazione utenti da file Users.json
     @JsonCreator
-    public User(@JsonProperty('username') String username) {
+    public User(@JsonProperty("username") String username) {
         this.username = username; 
     }
 

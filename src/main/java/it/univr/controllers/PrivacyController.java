@@ -1,7 +1,7 @@
 package it.univr.controllers;
 
-import it.univr.model.User;
-import it.univr.service.UserService;
+import it.univr.models.User;
+import it.univr.services.UserService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,8 +1,8 @@
 package it.univr.services;
 
-import it.univr.model.PasswordResetToken;
-import it.univr.model.User;
-import it.univr.repository.PasswordResetTokenRepository;
+import it.univr.models.PasswordResetToken;
+import it.univr.models.User;
+import it.univr.repositories.PasswordResetTokenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package it.univr.model; 
+package it.univr.models;
 
-import jakarta.persitence.*;
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -11,9 +11,9 @@ public class PasswordResetToken {
   private Long id; 
   private String token; 
   private LocalDateTime expireDate; 
-  private Sting userUsername;
+  private String userUsername;
 
-  protected PasswordResetToken() {}
+  public PasswordResetToken() {}
 
   // Getters and Setters
 
@@ -21,9 +21,9 @@ public class PasswordResetToken {
 
   public void setToken(String token) {this.token = token;}
 
-  public LocalDateTime getExpiryDate() {return expiryDate;}
+  public LocalDateTime getExpiryDate() {return expireDate;}
 
-  public void setExpiryDate(LocalDateTime expiryDate) {this.expiryDate = expiryDate;}
+  public void setExpiryDate(LocalDateTime expiryDate) {this.expireDate = expiryDate;}
 
   public String getUserUsername() {return userUsername;}
 

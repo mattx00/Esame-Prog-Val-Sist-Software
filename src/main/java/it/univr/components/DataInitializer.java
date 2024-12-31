@@ -5,9 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import it.univr.model.PasswordResetToken;
-import it.univr.model.User;
-import it.univr.service.UserService;
+import it.univr.models.PasswordResetToken;
+import it.univr.models.User;
+import it.univr.services.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

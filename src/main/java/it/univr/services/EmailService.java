@@ -1,7 +1,7 @@
 package it.univr.services;
 
-import it.univr.model.PasswordResetToken;
-import it.univr.model.User;
+import it.univr.models.PasswordResetToken;
+import it.univr.models.User;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +20,9 @@ public class EmailService {
         this.passwordTokenService = passwordTokenService;
     }
 
-    public void sendEmail(SimpleMailMessage message) {sentEmails.add(message);}
+    public void sendEmail(SimpleMailMessage message) {
+        sentEmails.add(message);
+    }
 
     // Metodo principale per invio email
     public void sendEmailForPurpose(String toEmail, String subject, String emailBodyTemplate) {
@@ -64,3 +66,4 @@ public class EmailService {
                 + "%3$s";
         sendEmailForPurpose(toEmail, subject, emailBodyTemplate);
     }
+}
