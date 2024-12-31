@@ -22,12 +22,15 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
     implementation('org.springframework.boot:spring-boot-starter-mail')
-    implementation('javax.servlet:javax.servlet-api:4.0.1')
+    implementation('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2')
     runtimeOnly 'com.h2database:h2'
-    testImplementation ('org.springframework.boot:spring-boot-starter-test')
-    testImplementation 'io.rest-assured:rest-assured:5.3.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 
+    testImplementation ('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.24.0'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.3.3'
 }
 
 test {
