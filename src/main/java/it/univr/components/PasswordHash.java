@@ -34,6 +34,7 @@ public class PasswordHash {
 
     public static boolean verifyPassword(String password, String hash) {
         String hashedPassword = hashPassword(password);
+        System.out.println(hashedPassword);
         return hashedPassword.equals(hash);
     }
 }

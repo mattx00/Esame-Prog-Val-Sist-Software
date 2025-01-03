@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 public class Project {
@@ -17,6 +18,9 @@ public class Project {
   private LocalDate startDate; 
   @DateTimeFormat(pattern = "yyyy-MM-dd")
   private LocalDate endDate;
+
+  @OneToMany(mappedBy="project")
+  private Set<WorkPackage> workPackages;
 
   // Getters and Setters
   
@@ -39,5 +43,13 @@ public class Project {
   public LocalDate getEndDate() {return endDate;}
 
   public void setEndDate(LocalDate endDate) {this.endDate = endDate;}
+
+  @Override
+  public String toString() {
+    return "Project [id=" + id + ", name=" + name + ", description=" + description + ", startDate=" + startDate
+        + ", endDate=" + endDate + "]";
+  }
+
+  
   
 }
